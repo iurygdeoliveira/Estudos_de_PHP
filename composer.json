@@ -1,17 +1,17 @@
 {
-    "name": "iuryprof/estudos_de_php",
-    "description": "Estudos de PHP",
-    "type": "project",
-    "require-dev": {
-        "phalcon/devtools": "v4.0.3"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Iury Gomes de Oliveira",
-            "email": "iury.oliveira@ifto.edu.br"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {}
+  "name": "jlucaso/estudos_de_php",
+  "type": "project",
+  "require-dev": {
+    "phalcon/devtools": "^4.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "João Lucas de Oliveira Lopes",
+      "email": "jlucaso@hotmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {},
+  "description": "Teste"
 }
