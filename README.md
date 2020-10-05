@@ -1,3 +1,1 @@
-Repositorio destinado aos estudos da linguagem PHP
-
-Entendendo git glow
+Repositorio destinado aos estudos da linguagem PHP.
