@@ -1,0 +1,17 @@
+{
+    "name": "luis_/estudos_de_php",
+    "description": "Estudos de PHP",
+    "type": "project",
+    "require-dev": {
+        "phalcon/devtools": "v4.0.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Luis Henrique",
+            "email": "sousarodriguesluishenrique@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
