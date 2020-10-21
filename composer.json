@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "luis_/estudos_de_php",
+=======
+    "name": "iuryprof/estudos_de_php",
+>>>>>>> prof_iury_original/master
     "description": "Estudos de PHP",
     "type": "project",
     "require-dev": {
@@ -8,8 +12,13 @@
     "license": "MIT",
     "authors": [
         {
+<<<<<<< HEAD
             "name": "Luis Henrique",
             "email": "sousarodriguesluishenrique@gmail.com"
+=======
+            "name": "Iury Gomes de Oliveira",
+            "email": "iury.oliveira@ifto.edu.br"
+>>>>>>> prof_iury_original/master
         }
     ],
     "minimum-stability": "stable",
