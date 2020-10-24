@@ -1,31 +1,16 @@
-FROM php:7.4.9-fpm-alpine
+FROM php:7.4.11-fpm-alpine
 
 RUN apk update
 RUN apk upgrade 
-RUN apk add autoconf g++ libtool make 
-RUN apk add libmcrypt-dev oniguruma-dev
-RUN apk add php7-pdo
-RUN apk add php7-curl
-RUN apk add php7-amqp
-RUN apk add php7-bcmath
-RUN apk add php7-openssl
-RUN apk add php7-zip
-RUN apk add php7-bz2
-RUN apk add php7-gettext
-RUN apk add php7-fileinfo
-RUN apk add php7-tokenizer
-RUN apk add php7-gmp
-RUN apk add php7-mcrypt
-RUN apk add php7-calendar
-RUN apk add php7-cli
-RUN apk add php7-memcached
-RUN apk add icu-dev libxml2-dev
-RUN docker-php-ext-install pdo_mysql 
-RUN docker-php-ext-install intl
-RUN docker-php-ext-install opcache
-RUN docker-php-ext-install json
-RUN docker-php-ext-install mbstring
-RUN docker-php-ext-install sockets
+RUN apk add --no-cache autoconf g++ linux-headers libtool make 
+RUN apk add --no-cache libmcrypt-dev oniguruma-dev
+RUN apk add --no-cache php7-pdo php7-curl php7-bcmath php7-openssl php7-zip php7-bz2 php7-gettext php7-fileinfo php7-tokenizer php7-gmp php7-mcrypt php7-calendar php7-cli php7-memcached icu-dev libxml2-dev
+
+RUN docker-php-ext-install pdo_mysql intl opcache json mbstring sockets
+
+RUN apk add --no-cache $PHPIZE_DEPS \
+  && pecl install xdebug-2.9.0 \
+  && docker-php-ext-enable xdebug
 
 ARG PSR_VERSION=0.7.0
 ARG PHALCON_VERSION=4.0.2

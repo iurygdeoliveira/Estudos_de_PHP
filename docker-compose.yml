@@ -9,7 +9,7 @@ services:
             - ./docker/php/php.ini:/usr/local/etc/php/php.ini
     nginx:
         container_name: nginx
-        image: "nginx:1.19.1-alpine"
+        image: "nginx:latest"
         volumes:
             - ./www:/usr/share/nginx/html
             - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
