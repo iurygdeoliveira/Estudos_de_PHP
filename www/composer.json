@@ -22,10 +22,10 @@
     },
     "require": {
         "php": "^7.4",
-        "ext-PDO": "^7.4"
+        "ext-PDO": "^7.4",
+        "vlucas/phpdotenv": "^v5.2.0"
     },                                
     "require-dev": {
-        "phalcon/devtools": "v4.0.3",
-        "fzaninotto/faker": "v1.9.1"
+        "fzaninotto/faker": "^v1.9.1"
     }
 }
