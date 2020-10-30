@@ -1,0 +1,73 @@
+COMANDOS GIT:
+
+*LOGIN:
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+*AJUDA:
+git help {comando}
+git {comando} --help
+man git- {comando}
+
+*INICIALIZANDO UM REPOSITORIO EXISTENTE:
+git init
+
+*GITGNORE:
+touch .gitignore
+git add .gitignore
+
+*COMMIT:
+git commit -m "Versão inicial do projeto"
+git commit -m "Mensagem"      (COMMIT COM MENSAGEM)
+git commit -m "Mensagem" --amend     (REFAZENDO UM COMMIT)
+
+*CLONAR REPOSITORIO:
+git clone git://github.com/schacon/grit.git
+git clone git://github.com/schacon/grit.git mygrit
+
+*GRAVANDO ALTERAÇÕES:
+git add.           (global)
+git add nomedoarquivo
+
+*VERIFICANDO O STATUS:
+git status
+
+*VERIFICANDO MUDANÇAS:
+git diff
+git diff --cached
+
+*DESFAZENDO COISAS:
+git reset --hard HEAD~1		(VOLTAR AO ULTIMO COMMIT)
+git reset --soft HEAD~1		(VOLTA AO ULTIMO COMMIT MAS MANTEM OS ARQUIVOS NO STAGE)
+
+*RECUPERNADO COISAS:
+git reflog	(VISUALIZAR HASHS)
+git merge {hash}	(aplicar)
+
+*REMOVENDO ARQUIVOS:
+git rm -f {arquivo}
+
+*MOVENDO ARQUIVOS:
+git mv arquivo_origem arquivo_destino
+
+*BRANCH:
+git branch testing		(CRIAR)
+git checkout testing		(MUDAR BRANCH CRIADA)
+git checkout 		(MUDAR DE BRANCH)
+git checkout -b {nome_da_branch}	(MUDAR DE BRANCH E CRIAR UMA AO MESMO TEMPO)
+
+*RESOLVENDO CONFLITOS POR INTERFACE GRAFICA:
+git mergetool
+
+
+*TAGS:
+git tag	(VISUALIZAR)
+git tag -a v1.4 -m 'my version 1.4'	(CRIAR)
+
+
+*ATUALIZAR PROJETOS:
+
+
+
+https://comandosgit.github.io
+
