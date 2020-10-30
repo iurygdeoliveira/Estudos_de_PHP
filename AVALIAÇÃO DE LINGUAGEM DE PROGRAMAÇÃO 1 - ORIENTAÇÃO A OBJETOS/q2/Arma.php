@@ -2,15 +2,13 @@
 
 class Arma
 {
-    private $nome;
-    private $criminoso;
-    private $id;
+    public $nome;
+    private $tipo;
 
-    function __construct($nome, $criminoso, $id)
+
+    function __construct($nome, $tipo)
     {
         $this->nome = $nome;
-        $this->$id = $id;
-        $criminoso->setArma($this->id);
-        $this->criminoso = $criminoso->id;
+        $this->$tipo = $tipo;
     }
 }

@@ -2,21 +2,13 @@
 
 class Criminoso
 {
-    private $nome;
-    private $crime;
-    private $arma;
-    private $id;
-    function __construct($nome, $crime, $id)
+    public $nome;
+    private $idade;
+    private $cpf;
+    function __construct($nome, $idade, $cpf)
     {
         $this->nome = $nome;
-        $this->crime = $crime;
-        $this->id = $id;
-    }
-    function setArma($arma)
-    {
-        $this->arma = $arma;
-    }
-    function setVitima()
-    {
+        $this->idade = $idade;
+        $this->cpf = $cpf;
     }
 }
