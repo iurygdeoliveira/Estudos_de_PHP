@@ -14,7 +14,8 @@
         "psr-4":{
             "classes\\": "Classes/",
             "interfaces\\": "Interfaces/",
-            "traits\\": "Traits/"
+            "traits\\": "Traits/",
+            "model\\": "Model/"
         },
         "files":[
             "config/Config.php"
@@ -22,10 +23,10 @@
     },
     "require": {
         "php": "^7.4",
-        "ext-PDO": "^7.4",
-        "vlucas/phpdotenv": "^v5.2.0"
+        "ext-PDO": "^7.4"
     },                                
     "require-dev": {
+        "phalcon/devtools": "^v4.0.3",
         "fzaninotto/faker": "^v1.9.1"
     }
 }
