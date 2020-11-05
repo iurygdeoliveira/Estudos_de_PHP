@@ -1,41 +1,26 @@
-[03-Nov-2020 19:16:38 America/Araguaina] PHP Parse error:  syntax error, unexpected ')' in /usr/share/nginx/html/questao1.php on line 15
-[03-Nov-2020 19:30:34 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::ob_end_flush() in /usr/share/nginx/html/questao1.php:18
+[05-Nov-2020 10:59:58 America/Araguaina] PHP Fatal error:  Uncaught TypeError: fwrite() expects parameter 1 to be resource, bool given in /usr/share/nginx/html/Classes/Delegacia.php:22
 Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao1.php on line 18
-[03-Nov-2020 19:30:38 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::ob_end_flush() in /usr/share/nginx/html/questao1.php:18
+#0 /usr/share/nginx/html/Classes/Delegacia.php(22): fwrite()
+#1 /usr/share/nginx/html/Classes/Delegacia.php(32): classes\Delegacia->gravarNoArquivo()
+#2 /usr/share/nginx/html/Classes/Delegacia.php(59): classes\Delegacia->salvarRegistro()
+#3 /usr/share/nginx/html/questao2.php(37): classes\Delegacia->registrarArmas()
+#4 {main}
+  thrown in /usr/share/nginx/html/Classes/Delegacia.php on line 22
+[05-Nov-2020 11:00:37 America/Araguaina] PHP Fatal error:  Uncaught TypeError: fwrite() expects parameter 1 to be resource, bool given in /usr/share/nginx/html/Classes/Delegacia.php:22
 Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao1.php on line 18
-[03-Nov-2020 19:30:40 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::ob_end_flush() in /usr/share/nginx/html/questao1.php:18
+#0 /usr/share/nginx/html/Classes/Delegacia.php(22): fwrite()
+#1 /usr/share/nginx/html/Classes/Delegacia.php(32): classes\Delegacia->gravarNoArquivo()
+#2 /usr/share/nginx/html/Classes/Delegacia.php(59): classes\Delegacia->salvarRegistro()
+#3 /usr/share/nginx/html/questao2.php(37): classes\Delegacia->registrarArmas()
+#4 {main}
+  thrown in /usr/share/nginx/html/Classes/Delegacia.php on line 22
+[05-Nov-2020 11:04:22 America/Araguaina] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to classes\Form::__construct() must be of the type string, bool given, called in /usr/share/nginx/html/questao2.php on line 25 and defined in /usr/share/nginx/html/Classes/Form.php:15
 Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao1.php on line 18
-[03-Nov-2020 19:31:01 America/Araguaina] PHP Parse error:  syntax error, unexpected 'new' (T_NEW) in /usr/share/nginx/html/questao1.php on line 19
-[03-Nov-2020 19:31:39 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::getTexto() in /usr/share/nginx/html/questao1.php:19
+#0 /usr/share/nginx/html/questao2.php(25): classes\Form->__construct()
+#1 {main}
+  thrown in /usr/share/nginx/html/Classes/Form.php on line 15
+[05-Nov-2020 11:04:30 America/Araguaina] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to classes\Form::__construct() must be of the type string, bool given, called in /usr/share/nginx/html/questao2.php on line 25 and defined in /usr/share/nginx/html/Classes/Form.php:15
 Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao1.php on line 19
-[03-Nov-2020 19:32:12 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::ob_end_flush() in /usr/share/nginx/html/questao1.php:21
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao1.php on line 21
-[03-Nov-2020 19:49:22 America/Araguaina] PHP Fatal error:  Uncaught TypeError: array_push() expects parameter 1 to be array, null given in /usr/share/nginx/html/Classes/Encriptar.php:55
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Encriptar.php(55): array_push()
-#1 /usr/share/nginx/html/questao1.php(21): classes\Encriptar->Passada1()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Encriptar.php on line 55
-[03-Nov-2020 19:49:30 America/Araguaina] PHP Fatal error:  Uncaught TypeError: array_push() expects parameter 1 to be array, null given in /usr/share/nginx/html/Classes/Encriptar.php:55
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Encriptar.php(55): array_push()
-#1 /usr/share/nginx/html/questao1.php(21): classes\Encriptar->Passada1()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Encriptar.php on line 55
-[03-Nov-2020 19:55:32 America/Araguaina] PHP Fatal error:  Uncaught TypeError: array_reverse() expects parameter 1 to be array, null given in /usr/share/nginx/html/Classes/Encriptar.php:78
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Encriptar.php(78): array_reverse()
-#1 /usr/share/nginx/html/questao1.php(24): classes\Encriptar->Passada2()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Encriptar.php on line 78
-[03-Nov-2020 20:04:27 America/Araguaina] PHP Parse error:  syntax error, unexpected '?', expecting ')' in /usr/share/nginx/html/Classes/Encriptar.php on line 85
+#0 /usr/share/nginx/html/questao2.php(25): classes\Form->__construct()
+#1 {main}
+  thrown in /usr/share/nginx/html/Classes/Form.php on line 15
