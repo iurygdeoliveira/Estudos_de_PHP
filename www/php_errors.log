@@ -1,178 +1,58 @@
-[05-Nov-2020 10:59:58 America/Araguaina] PHP Fatal error:  Uncaught TypeError: fwrite() expects parameter 1 to be resource, bool given in /usr/share/nginx/html/Classes/Delegacia.php:22
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Delegacia.php(22): fwrite()
-#1 /usr/share/nginx/html/Classes/Delegacia.php(32): classes\Delegacia->gravarNoArquivo()
-#2 /usr/share/nginx/html/Classes/Delegacia.php(59): classes\Delegacia->salvarRegistro()
-#3 /usr/share/nginx/html/questao2.php(37): classes\Delegacia->registrarArmas()
-#4 {main}
-  thrown in /usr/share/nginx/html/Classes/Delegacia.php on line 22
-[05-Nov-2020 11:00:37 America/Araguaina] PHP Fatal error:  Uncaught TypeError: fwrite() expects parameter 1 to be resource, bool given in /usr/share/nginx/html/Classes/Delegacia.php:22
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Delegacia.php(22): fwrite()
-#1 /usr/share/nginx/html/Classes/Delegacia.php(32): classes\Delegacia->gravarNoArquivo()
-#2 /usr/share/nginx/html/Classes/Delegacia.php(59): classes\Delegacia->salvarRegistro()
-#3 /usr/share/nginx/html/questao2.php(37): classes\Delegacia->registrarArmas()
-#4 {main}
-  thrown in /usr/share/nginx/html/Classes/Delegacia.php on line 22
-[05-Nov-2020 11:04:22 America/Araguaina] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to classes\Form::__construct() must be of the type string, bool given, called in /usr/share/nginx/html/questao2.php on line 25 and defined in /usr/share/nginx/html/Classes/Form.php:15
-Stack trace:
-#0 /usr/share/nginx/html/questao2.php(25): classes\Form->__construct()
-#1 {main}
-  thrown in /usr/share/nginx/html/Classes/Form.php on line 15
-[05-Nov-2020 11:04:30 America/Araguaina] PHP Fatal error:  Uncaught TypeError: Argument 2 passed to classes\Form::__construct() must be of the type string, bool given, called in /usr/share/nginx/html/questao2.php on line 25 and defined in /usr/share/nginx/html/Classes/Form.php:15
-Stack trace:
-#0 /usr/share/nginx/html/questao2.php(25): classes\Form->__construct()
-#1 {main}
-  thrown in /usr/share/nginx/html/Classes/Form.php on line 15
-[05-Nov-2020 12:36:42 America/Araguaina] PHP Fatal error:  Cannot redeclare classes\Texto::getTexto() in /usr/share/nginx/html/Classes/Texto.php on line 37
-[05-Nov-2020 12:36:42 America/Araguaina] PHP Stack trace:
-[05-Nov-2020 12:36:42 America/Araguaina] PHP   1. {main}() /usr/share/nginx/html/questao3.php:0
-[05-Nov-2020 12:36:42 America/Araguaina] PHP   2. spl_autoload_call() /usr/share/nginx/html/questao3.php:15
-[05-Nov-2020 12:36:42 America/Araguaina] PHP   3. Composer\Autoload\ClassLoader->loadClass() /usr/share/nginx/html/questao3.php:15
-[05-Nov-2020 12:36:42 America/Araguaina] PHP   4. Composer\Autoload\includeFile() /usr/share/nginx/html/vendor/composer/ClassLoader.php:322
-[05-Nov-2020 12:43:53 America/Araguaina] PHP Parse error:  syntax error, unexpected ')' in /usr/share/nginx/html/Classes/Texto.php on line 64
-[05-Nov-2020 12:46:59 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:65
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(65): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 65
-[05-Nov-2020 12:47:55 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:64
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(64): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 64
-[05-Nov-2020 12:48:20 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:65
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(65): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 65
-[05-Nov-2020 12:48:33 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:64
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(64): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 64
-[05-Nov-2020 12:49:05 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:65
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(65): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 65
-[05-Nov-2020 12:50:03 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:65
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(65): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 65
-[05-Nov-2020 12:50:35 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:66
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(66): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 66
-[05-Nov-2020 12:50:56 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:67
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(67): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 67
-[05-Nov-2020 12:53:09 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:67
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(67): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 67
-[05-Nov-2020 12:53:25 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:67
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(67): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 67
-[05-Nov-2020 12:58:23 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:67
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(67): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 67
-[05-Nov-2020 12:58:23 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:67
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(67): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 67
-[05-Nov-2020 12:58:29 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:67
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(67): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 67
-[05-Nov-2020 12:58:44 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:68
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(68): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 68
-[05-Nov-2020 13:02:04 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:68
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(68): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 68
-[05-Nov-2020 13:02:16 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:68
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(68): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 68
-[05-Nov-2020 13:04:34 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:68
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(68): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 68
-[05-Nov-2020 13:05:00 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:68
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(68): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 68
-[05-Nov-2020 13:05:57 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:70
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(70): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 70
-[05-Nov-2020 13:06:30 America/Araguaina] PHP Fatal error:  Uncaught TypeError: trim() expects parameter 1 to be string, bool given in /usr/share/nginx/html/Classes/Texto.php:69
-Stack trace:
-#0 /usr/share/nginx/html/Classes/Texto.php(69): trim()
-#1 /usr/share/nginx/html/questao3.php(18): classes\Texto->dividirTexto()
-#2 {main}
-  thrown in /usr/share/nginx/html/Classes/Texto.php on line 69
-[05-Nov-2020 13:55:53 America/Araguaina] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC), expecting ';' or '{' in /usr/share/nginx/html/Classes/Texto.php on line 80
-[05-Nov-2020 14:04:29 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::viewTextoInicial() in /usr/share/nginx/html/questao3.php:16
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao3.php on line 16
-[05-Nov-2020 14:05:13 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::viewTextoDividido() in /usr/share/nginx/html/questao3.php:19
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao3.php on line 19
-[05-Nov-2020 14:05:37 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::getT() in /usr/share/nginx/html/questao3.php:19
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao3.php on line 19
-[05-Nov-2020 14:05:59 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::getT() in /usr/share/nginx/html/questao3.php:19
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao3.php on line 19
-[05-Nov-2020 14:09:31 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::getResultado() in /usr/share/nginx/html/questao3.php:31
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao3.php on line 31
-[05-Nov-2020 14:10:06 America/Araguaina] PHP Fatal error:  Uncaught Error: Call to undefined method classes\Texto::aplicarReplace() in /usr/share/nginx/html/questao3.php:30
-Stack trace:
-#0 {main}
-  thrown in /usr/share/nginx/html/questao3.php on line 30
+[06-Nov-2020 11:08:48 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:08:48 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:08:49 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:08:49 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:08:49 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:08:49 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:00 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:01 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:02 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:03 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:04 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:05 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:06 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:06 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:06 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:06 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8
+[06-Nov-2020 11:09:06 America/Araguaina] PHP Parse error:  syntax error, unexpected ';', expecting identifier (T_STRING) or function (T_FUNCTION) or const (T_CONST) or \\ (T_NS_SEPARATOR) in /usr/share/nginx/html/index.php on line 8

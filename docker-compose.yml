@@ -23,6 +23,8 @@ services:
         environment:
             - MYSQL_USER=root
             - MYSQL_PASSWORD=root
+            - MYSQL_DATABASE=LP1
+            - MYSQL_HOST=mysql
         networks:
             - rede_docker
     nginx:
