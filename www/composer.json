@@ -1,0 +1,32 @@
+{
+    "name": "iuryprof/estudos_de_php",
+    "description": "Estudos de PHP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iury Gomes de Oliveira",
+            "email": "iury.oliveira@ifto.edu.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload":{
+        "psr-4":{
+            "classes\\": "Classes/",
+            "interfaces\\": "Interfaces/",
+            "traits\\": "Traits/",
+            "model\\": "Model/"
+        },
+        "files":[
+            "config/Config.php"
+        ]
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-PDO": "^7.4"
+    },                                
+    "require-dev": {
+        "phalcon/devtools": "^v4.0.3",
+        "fzaninotto/faker": "^v1.9.1"
+    }
+}

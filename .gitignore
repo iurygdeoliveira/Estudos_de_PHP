@@ -1,7 +1,16 @@
 /vendor/
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 MVC
 01 - Arquivos com configurações do VSCODE/atualizacao
 .gitignore
+>>>>>>> prof_iury_original/master
+=======
+www/vendor/
+docker/mysql
+MVC
+01 - Arquivos com configurações do VSCODE/atualizacao
+.gitignore
+.env
 >>>>>>> prof_iury_original/master
