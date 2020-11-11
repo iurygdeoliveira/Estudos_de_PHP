@@ -1,0 +1,44 @@
+[
+    [
+        [
+            [
+                {
+                    "identificacao": "4111672015fa4093a016621.65109586",
+                    "hora": "12:59",
+                    "data": "10\/10\/2020",
+                    "local": null,
+                    "idArma": "1",
+                    "idVitima": "1",
+                    "idCriminoso": "1"
+                },
+                {
+                    "identificacao": "21249047645fa409664e9ec2.65355009",
+                    "hora": "12:59",
+                    "data": "10\/10\/2020",
+                    "local": "Cimba",
+                    "idArma": "1",
+                    "idVitima": "1",
+                    "idCriminoso": "1"
+                }
+            ],
+            {
+                "identificacao": "8209685285fa418567251e4.22115118",
+                "hora": "12:59",
+                "data": "10\/10\/2020",
+                "local": "Cimba",
+                "idArma": "1",
+                "idVitima": "1",
+                "idCriminoso": "1"
+            }
+        ],
+        {
+            "identificacao": "11300058065fa4185dab1d45.95810458",
+            "hora": "12:59",
+            "data": "10\/10\/2020",
+            "local": "Cimba",
+            "idArma": "1",
+            "idVitima": "1",
+            "idCriminoso": "1"
+        }
+    ]
+]

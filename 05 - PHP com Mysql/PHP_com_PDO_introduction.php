@@ -29,10 +29,11 @@ PHPClassSession('Iniciando conexão com PDO', __LINE__);
 
 try{
     
+    
     $pdo = new PDO(
         "mysql:host=172.22.0.2;dbname=LP1",
-        "root",
-        "root",
+        getenv('MYSQL_USER'),
+        getenv('MYSQL_PASSWORD'),
         [
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
             ]
