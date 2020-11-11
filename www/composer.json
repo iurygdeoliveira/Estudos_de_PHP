@@ -26,7 +26,6 @@
         "ext-PDO": "^7.4"
     },                                
     "require-dev": {
-        "phalcon/devtools": "^v4.0.3",
-        "fzaninotto/faker": "^v1.9.1"
+        "phalcon/devtools": "^v4.0.3"
     }
 }

@@ -42,7 +42,6 @@ class Conectar
                 );
             } catch (PDOException $exception) {
                 var_dump($exception);
-                echo $exception->xdebug_message;
                 die("<h1>Whoops! Erro ao conectar...</h1>");
             }
         }

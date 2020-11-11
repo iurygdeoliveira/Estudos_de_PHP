@@ -3,7 +3,7 @@ DROP TABLE `address`;
 CREATE TABLE `address` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `street` varchar(255) default NULL,
-  `number` varchar(10) default NULL,
+  `number` varchar(255) default NULL,
   `complement` varchar(255),
   `user_id` mediumint default NULL,
   PRIMARY KEY (`id`)
