@@ -23,7 +23,8 @@
     },
     "require": {
         "php": "^7.4",
-        "ext-PDO": "^7.4"
+        "ext-PDO": "^7.4",
+        "gabordemooij/redbean": "^v5.6"
     },                                
     "require-dev": {
         "phalcon/devtools": "^v4.0.3"

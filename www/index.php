@@ -5,101 +5,53 @@ ob_start();
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use model\Conectar;
-use model\User;
+use \RedBeanPHP\R;
 
-PHPClassName('PHP COM BANCO DE DADOS');
+PHPClassName('PHP COM ORM RedBeanPHP');
+
 
 PHPClassSession('CONEXÃO', __LINE__);
 
-$conexao = Conectar::getInstance();
-var_dump($conexao);
+R::setup(
+    "mysql:host=" . getenv('MYSQL_HOST') .
+        ";dbname=" . getenv('MYSQL_DATABASE'),
+    getenv('MYSQL_USER'),
+    getenv('MYSQL_PASSWORD'),
+); //for both mysql or mariaDB
 
-PHPClassSession('SQL INJECTION', __LINE__);
+R::getDatabaseAdapter()->getDatabase()->stringifyFetches(FALSE);
+R::getDatabaseAdapter()->getDatabase()->getPDO()->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
 
-$injection = "OR 1=1";
+PHPClassSession('CREATE', __LINE__);
 
-//$SELECT = "SELECT * FROM users WHERE id = 50 {$injection}";
-$SELECT = "SELECT * FROM users LIMIT 5";
+// $book = R::dispense('book');
 
-$query = $conexao->prepare($SELECT);
+// $book->title = 'Estudando RedBeansPHP';
+// $book->rating = 10;
+// $book->price = '29.99';
 
-var_dump($query, $query->rowCount(), $query->columnCount(), $query->fetchAll());
+// $id = R::store($book);
 
-$query->execute();
+// var_dump($id);
+// var_dump($book);
+// var_dump(get_class_methods($book));
 
-var_dump($query, $query->rowCount(), $query->columnCount(), $query->fetchAll());
+PHPClassSession('RETRIEVE', __LINE__);
 
-PHPClassSession('BIND VALUE', __LINE__);
+$book = R::load('book', 8);
+var_dump($book);
 
-$SELECT = "SELECT * FROM users WHERE id = :id";
-$query2 = $conexao->prepare($SELECT);
-$query2->bindValue(":id", 5, PDO::PARAM_INT);
-$query2->execute();
+PHPClassSession('UPDATE', __LINE__);
 
-var_dump($query2->fetch());
+$book->title = 'Learn to fly';
+$book->rating = 'good';
+$book->price = 105.15;
+$book->data = R::isoDateTime();
 
-$INSERT = "INSERT INTO users (first_name, last_name, email, document)
- VALUES (?,?,?,?)";
+var_dump(R::store($book));
 
-// $query3 = $conexao->prepare($INSERT);
-// $query3->bindValue(1, "LIVIA", PDO::PARAM_STR);
-// $query3->bindValue(2, "GOMES", PDO::PARAM_STR);
-// $query3->bindValue(3, "livia@gmail.com", PDO::PARAM_STR);
-// $query3->bindValue(4, "989989745", PDO::PARAM_STR);
-// $query3->execute();
+PHPClassSession('DELETE', __LINE__);
 
-// var_dump($query3->rowCount(), $conexao->lastInsertId());
-
-PHPClassSession('BIND PARAM', __LINE__);
-
-$INSERT = "INSERT INTO users (first_name, last_name, email, document)
- VALUES (:first_name,:last_name,:email,:document)";
-
-$first_name = "Helena";
-$last_name = "Gomes";
-$email = "helena@gmail.com";
-$document = "235689";
-
-$query4 = $conexao->prepare($INSERT);
-$query4->bindParam(":first_name", $first_name, PDO::PARAM_STR);
-$query4->bindParam(":last_name", $last_name, PDO::PARAM_STR);
-$query4->bindParam(":email", $email, PDO::PARAM_STR);
-$query4->bindParam(":document", $document, PDO::PARAM_STR);
-$query4->execute();
-
-var_dump($query4->rowCount(), $conexao->lastInsertId());
-
-PHPClassSession('STMT EXECUTE ARRAY', __LINE__);
-
-$insert = "
-INSERT INTO users (first_name, last_name, email, document)
-VALUES (:first_name, :last_name, :email, :document)";
-$stmt = $conexao->prepare($insert);
-
-$user = [
-    "first_name" => "Talita",
-    "last_name" => "Barbosa",
-    "email" => "talita@gmail.com",
-    "document" => "234234",
-];
-
-// $stmt->execute($user);
-
-var_dump($stmt->rowCount(), $conexao->lastInsertId());
-
-PHPClassSession('BIND COLUMN', __LINE__);
-
-$select = "SELECT * FROM users LIMIT 3";
-$stmt = $conexao->prepare($select);
-$stmt->execute();
-
-$stmt->bindColumn("first_name", $name);
-$stmt->bindColumn("email", $email);
-
-while ($user = $stmt->fetch()) {
-    var_dump($user);
-    echo "<p class='trigger accept'>O e-mail de {$name} é {$email}</p>";
-}
+var_dump(R::trash($book)); //for one bean
 
 ob_end_flush();
