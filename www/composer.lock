@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0d81c7bc65ed9cc5185fa362703c043",
+    "content-hash": "3390725418eae608eea0cdf981dee554",
     "packages": [
         {
             "name": "gabordemooij/redbean",
