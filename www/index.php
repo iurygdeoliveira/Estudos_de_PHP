@@ -5,10 +5,12 @@ ob_start();
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use classes\Escola;
-use classes\Facade;
-use classes\PizzaFactory;
+use model\MySQL;
+use model\Oracle;
 use \RedBeanPHP\R;
+use classes\Diretorio;
+use classes\File;
+use classes\Cliente;
 
 PHPClassName('PADRÕES DE PROJETO (DESIGN PATTERNS)');
 
@@ -46,27 +48,44 @@ echo "<p class='trigger accept'> PADRÕES COMPORTAMENTAIS</p>";
 echo "<p> São padrões que focam em resolver problemas de comunicação entre objetos, eles são: </p>";
 var_dump("Interpreter", "Template Method", "Chain of Responsibility", "Command", "Iterator", "Mediator", "Memento", "Observer", "State", "Strategy", "Visitor");
 
-PHPClassSession('SINGLETON', __LINE__);
-echo "<p> Objetivo: Garante que uma classe tenha apenas uma instância e provê um ponto de acesso global a ela. Use o singleton quando, você identificar que deve haver exatamente uma instância de uma classe, e ela deve ser acessível aos cliente a apartir de um ponto de acesso conhecido </p>";
+PHPClassSession('STRATEGY', __LINE__);
+echo "<p> Objetivo: Define uma família de algoritmos, que encapsula cada um deles e os torna intercambiáveis. O strategy permite que o algoritmo varie independentemente dos clientes que o utilizam </p>";
 
-$escola = Escola::getInstance();
-var_dump($escola);
-$escola2 = Escola::getInstance();
-var_dump($escola2);
+$db = new Oracle();
+$db->conectar();
+$db->salvar();
+$db->ler();
 
-PHPClassSession('FACADE', __LINE__);
-echo "<p> Objetivo: BUSCA ESCONDER A COMPLEXIDADE DE UM SUB-SISTEMA, ASSIM DEISANDO O CÓDIGO LIMPO, MAS FÁCIL DE REALIZAR MANUTENÇÕES, E AJUDA A EVITAR REPETIÇÃO DE CÓDIGO </p>";
+PHPClassSession('COMPOSITE', __LINE__);
+echo "<p> Objetivo: Compõe objetos em estrutura de árvore para representar hierarquias do tipo partes-todo. O composite permite que os clientes tratem objetos individuais e composições de objetos de maneira uniforme </p>";
 
-Facade::finalizarCompra(10, "Rua qualquer", "2323323", "Correios", 0);
+$pasta = new Diretorio("Pasta de Cursos");
+$php = new File("php.zip");
+$javascript = new File("js.zip");
+$python = new File("python.zip");
 
-PHPClassSession('FACTORY', __LINE__);
-echo "<p> Objetivo: ESTE PADRÃO DE PROJETO É UTILIZADO PARA
-CENTRALIZAR O PROCESSO DE CRIAÇÃO DE OBJETOS EM UM ÚNICO LUGAR É OTIMO PARA TRABALHAR QUANDO TEMOS VÁRIAS
-VARIAÇÕES DE OBJETOS </p>";
+$pasta->add($php);
+$pasta->add($javascript);
+$pasta->add($python);
 
-$fabrica = new PizzaFactory();
-var_dump($fabrica);
+$outraPasta = new Diretorio("Outra Pasta");
 
-var_dump($fabrica->criarComida(3));
+$java = new File("java.rar");
+$ruby = new File("ruby.rar");
+
+$outraPasta->add($java);
+$outraPasta->add($ruby);
+
+$pasta->add($outraPasta);
+
+$pasta->listar();
+
+var_dump($pasta);
+
+PHPClassSession('ADAPTER', __LINE__);
+echo "<p> Objetivo: Converte a interface de uma classe em outra interface esperada pelos clientes. O adapter permite que certas classes trabalhem em conjunto, pois de outra forma seria impossível por causa de suas interfaces incompatíveis </p>";
+
+$cliente = new Cliente();
+$cliente->principal();
 
 ob_end_flush();
