@@ -12,14 +12,16 @@
     "minimum-stability": "stable",
     "autoload":{
         "psr-4":{
-            "classes\\": "Classes/",
-            "interfaces\\": "Interfaces/",
-            "traits\\": "Traits/",
-            "model\\": "Model/"
-        },
-        "files":[
-            "config/Config.php"
-        ]
+            "classes\\": "app/classes/",
+            "controllers\\": "app/controllers/",
+            "interfaces\\": "app/interfaces/",
+            "traits\\": "app/traits/",
+            "databases\\": "app/databases/",
+            "helpers\\": "app/helpers/",
+            "routes\\": "app/routes/",
+            "views\\": "app/views/",
+            "public\\": "public/"
+        }
     },
     "require": {
         "php": "^7.4",
@@ -28,6 +30,8 @@
         "league/csv": "^9.6",
         "league/flysystem": "^2.0",
         "league/monga": "^1.2",
-        "league/period": "^4.11"
+        "league/period": "^4.11",
+        "slim/slim": "^4.7",
+        "slim/twig-view": "^3.2"
     }                                
 }

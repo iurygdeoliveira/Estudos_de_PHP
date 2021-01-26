@@ -1,0 +1,7 @@
+- verificar quais imagens está presentes na máquina (sudo docker images)
+- verificar quais containers estão em execução (sudo docker ps)
+- verificar todos os containers criados (sudo docker ps -a )
+- parar a execução de um container (sudo docker stop < id container >)
+- remover um container (sudo docker rm < id container >)
+- remover uma imagem (sudo docker rmi < id imagem >)
+- iniciar serviço recriando containers (docker-compose -p <NAME> up --force-recreate)
