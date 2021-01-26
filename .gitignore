@@ -3,5 +3,4 @@ www/vendor/
 docker/mysql
 MVC
 01 - Arquivos com configurações do VSCODE/atualizacao
-.gitignore
 .env

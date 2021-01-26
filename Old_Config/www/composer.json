@@ -24,10 +24,9 @@
     "require": {
         "php": "^7.4",
         "ext-PDO": "^7.4",
-        "gabordemooij/redbean": "^v5.6",
-        "league/csv": "^9.6",
-        "league/flysystem": "^2.0",
-        "league/monga": "^1.2",
-        "league/period": "^4.11"
-    }                                
+        "gabordemooij/redbean": "^v5.6"
+    },                                
+    "require-dev": {
+        
+    }
 }
