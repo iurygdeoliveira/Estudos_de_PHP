@@ -32,6 +32,10 @@
         "league/monga": "^1.2",
         "league/period": "^4.11",
         "slim/slim": "^4.7",
-        "slim/twig-view": "^3.2"
+        "slim/twig-view": "^3.2",
+        "slim/psr7": "^1.3"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.18"
     }                                
 }
