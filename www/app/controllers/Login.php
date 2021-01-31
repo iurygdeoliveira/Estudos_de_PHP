@@ -10,7 +10,6 @@ class Login extends Base
     {
         return $this->getTwig()->render($response, $this->setView('login'), [
             'title' => 'Login',
-            'class_css_in_body' => "class='hold-transition login-page'"
         ]);
     }
 }
