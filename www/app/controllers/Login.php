@@ -15,9 +15,49 @@ class Login extends Base
         // $user = new User();
 
         // $data = [
-        //     "title" => "Estudando RedBeansPHP",
-        //     "rating" => 10,
-        //     "price" => '29.99'
+        //     "title" => "Estudando",
+        //     "rating" => 12,
+        //     "price" => '19.00'
+        // ];
+
+        // if ($user->insert('book', $data) === false) {
+        //     var_dump($user->getError());
+        // }
+
+        return $this->getTwig()->render($response, $this->setView('login'), [
+            'title' => 'Login',
+        ]);
+    }
+
+    public function register($request, $response)
+    {
+
+        // $user = new User();
+
+        // $data = [
+        //     "title" => "Estudando",
+        //     "rating" => 12,
+        //     "price" => '19.00'
+        // ];
+
+        // if ($user->insert('book', $data) === false) {
+        //     var_dump($user->getError());
+        // }
+
+        return $this->getTwig()->render($response, $this->setView('login'), [
+            'title' => 'Login',
+        ]);
+    }
+
+    public function forgot($request, $response)
+    {
+
+        // $user = new User();
+
+        // $data = [
+        //     "title" => "Estudando",
+        //     "rating" => 12,
+        //     "price" => '19.00'
         // ];
 
         // if ($user->insert('book', $data) === false) {

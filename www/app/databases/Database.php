@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace app\databases;
 
+use app\traits\InsertDB;
 use \RedBeanPHP\R;
 use PDO;
 use PDOException;
 
 class Database
 {
-    /**
-     * Class constructor.
-     */
+    use InsertDB;
+
     public function __construct()
     {
 

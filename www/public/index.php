@@ -11,9 +11,13 @@ use app\controllers\Login;
 
 $app = AppFactory::create();
 
-// ROUTES
+// WEB ROUTES
 $app->get('/', Home::class . ":index");
+
+// LOGIN ROUTES
 $app->get('/login', Login::class . ":index");
+$app->get('/registrar', Login::class . ":register");
+$app->get('/recuperar', Login::class . ":forgot");
 
 $app->run();
 ob_end_flush();
