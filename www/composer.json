@@ -12,16 +12,12 @@
     "minimum-stability": "stable",
     "autoload":{
         "psr-4":{
-            "classes\\": "app/classes/",
-            "controllers\\": "app/controllers/",
-            "interfaces\\": "app/interfaces/",
-            "traits\\": "app/traits/",
-            "databases\\": "app/databases/",
-            "helpers\\": "app/helpers/",
-            "routes\\": "app/routes/",
-            "views\\": "app/views/",
+            "app\\": "app/",
             "public\\": "public/"
-        }
+        },
+        "files":[
+            "app/helpers/config.php"
+        ]
     },
     "require": {
         "php": "^7.4",

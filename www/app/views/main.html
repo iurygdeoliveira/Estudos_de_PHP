@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{% include "partials/head.html" %}
+
+<body{% autoescape false %}{{ class_css_in_body}}{% endautoescape %}>
+
+    <!-- HEADER -->
+    {% include "partials/header.html" %}
+
+    <!-- CONTENT -->
+    {% block content %}{% endblock %}
+
+    <!-- FOOTER -->
+    {% include "partials/footer.html" %}
+
+    <script></script>
+    </body>
+
+</html>
