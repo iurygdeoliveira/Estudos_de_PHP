@@ -16,7 +16,8 @@
             "public\\": "public/"
         },
         "files":[
-            "app/helpers/config.php"
+            "app/support/config.php",
+            "app/support/helpers.php"
         ]
     },
     "require": {
