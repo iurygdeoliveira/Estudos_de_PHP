@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace app\controllers;
 
-use app\databases\models\User;
-
 class Login extends Base
 {
     public function index($request, $response)

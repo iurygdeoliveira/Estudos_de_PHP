@@ -7,7 +7,7 @@ namespace app\traits;
 use RedBeanPHP\R;
 use RedBeanPHP\RedException;
 
-trait InsertDB
+trait Create
 {
     public function insert(string $table, array $data, int $count = 1)
     {

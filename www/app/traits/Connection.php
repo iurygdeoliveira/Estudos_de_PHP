@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace app\databases;
+namespace app\traits;
 
-use app\traits\InsertDB;
-use \RedBeanPHP\R;
+use RedBeanPHP\R;
+use RedBeanPHP\RedException;
 use PDO;
-use PDOException;
 
-class Connection
+trait Connection
 {
     public function connectDB()
     {
@@ -24,7 +23,7 @@ class Connection
 
             R::getDatabaseAdapter()->getDatabase()->stringifyFetches(FALSE);
             R::getDatabaseAdapter()->getDatabase()->getPDO()->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
-        } catch (PDOException $e) {
+        } catch (RedException $e) {
             echo $e->getmessage();
         }
     }

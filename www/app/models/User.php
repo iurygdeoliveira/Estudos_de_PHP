@@ -2,19 +2,22 @@
 
 declare(strict_types=1);
 
-namespace app\databases\models;
+namespace app\models;
 
-use app\databases\Connection;
-use app\traits\InsertDB;
-use RedBeanPHP\RedException;
-use RedBeanPHP\R;
+use app\traits\Connection;
+use app\traits\Create;
 
-class User extends Connection
+class User
 {
 
+    // atributtes
     private $error;
-    use InsertDB;
 
+    // traits
+    use Create;
+    use Connection;
+
+    // methods
     public function __construct()
     {
         $this->connectDB();
