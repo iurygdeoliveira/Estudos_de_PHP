@@ -9,11 +9,9 @@ use \RedBeanPHP\R;
 use PDO;
 use PDOException;
 
-class Database
+class Connection
 {
-    use InsertDB;
-
-    public function __construct()
+    public function connectDB()
     {
 
         try {
