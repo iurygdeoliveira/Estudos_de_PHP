@@ -1,7 +1,23 @@
-{% extends "home/main.html" %}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-{% block content %}
+{% include "home/partials/head.html" %}
 
-<h2>Home</h2>
+<body>
 
-{% endblock %}
+    <!-- HEADER -->
+    {% include "home/partials/header.html" %}
+
+    <!-- CONTENT -->
+    {% block content %}
+    <h2>Home</h2>
+    {{ mensagem }}
+    {% endblock %}
+
+    <!-- FOOTER -->
+    {% include "home/partials/footer.html" %}
+
+
+</body>
+
+</html>

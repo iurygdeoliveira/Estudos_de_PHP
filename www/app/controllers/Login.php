@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace app\controllers;
 
+use app\classes\Flash;
+
 class Login extends Base
 {
     public function index($request, $response)
@@ -22,13 +24,16 @@ class Login extends Base
         //     var_dump($user->getError());
         // }
 
-        return $this->getTwig()->render($response, $this->setView('login/login'), [
-            'sistema' => 'teste',
-            'title' => 'Login',
-            'link_acesso' => url("admin"),
-            'link_forgot' => url("recuperar"),
-
-        ]);
+        return $this->getTwig()->render(
+            $response,
+            $this->setView('login/login'),
+            [
+                'sistema' => 'teste',
+                'title' => 'Login',
+                'link_acesso' => url("admin"),
+                'link_forgot' => url("recuperar")
+            ]
+        );
     }
 
     public function forgot($request, $response)
