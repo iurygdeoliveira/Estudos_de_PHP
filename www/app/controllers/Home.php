@@ -13,10 +13,11 @@ class Home extends Base
 
         return $this->getTwig()->render(
             $response,
-            $this->setView('home/home'),
+            $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
             [
                 'title' => 'Home',
-                'message' => Flash::getMessage()
+                'message' => Flash::getMessage(),
+                'link_login' => url("login")
             ]
 
         );

@@ -26,7 +26,7 @@ class Login extends Base
 
         return $this->getTwig()->render(
             $response,
-            $this->setView('login/login'),
+            $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
             [
                 'sistema' => 'teste',
                 'title' => 'Login',
@@ -39,11 +39,15 @@ class Login extends Base
     public function forgot($request, $response)
     {
 
-        return $this->getTwig()->render($response, $this->setView('login/forgot'), [
-            'sistema' => 'teste',
-            'title' => 'Recuperar senha',
-            'link_recovery' => url("renovar"),
-            'link_login' => url("login"),
-        ]);
+        return $this->getTwig()->render(
+            $response,
+            $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
+            [
+                'sistema' => 'teste',
+                'title' => 'Recuperar senha',
+                'link_recovery' => url("renovar"),
+                'link_login' => url("login"),
+            ]
+        );
     }
 }

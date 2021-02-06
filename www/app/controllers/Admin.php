@@ -9,9 +9,13 @@ class Admin extends Base
     public function index($request, $response)
     {
 
-        return $this->getTwig()->render($response, $this->setView('admin'), [
-            'sistema' => 'teste',
-            'title' => 'Admin'
-        ]);
+        return $this->getTwig()->render(
+            $response,
+            $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
+            [
+                'sistema' => 'teste',
+                'title' => 'Admin'
+            ]
+        );
     }
 }
