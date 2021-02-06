@@ -13,8 +13,7 @@ class Admin extends Base
             $response,
             $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
             [
-                'sistema' => 'teste',
-                'title' => 'Admin'
+                'title' => 'Dashboard'
             ]
         );
     }
