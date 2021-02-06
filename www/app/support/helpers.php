@@ -230,3 +230,17 @@ function passwd_rehash(string $hash): bool
 {
     return password_needs_rehash($hash, CONF_PASSWD_ALGO, CONF_PASSWD_OPTION);
 }
+/**
+ * ####################
+ * ###   REDIRECT   ###
+ * ####################
+ */
+/**
+ * @param mixed $response resposta da requisição
+ * @param mixed $to destino do redirecionamento
+ * @param mixed $status código de status
+ */
+function redirect($response, $to, $status = 200)
+{
+    return $response->withHeader('location', $to)->withStatus($status);
+}

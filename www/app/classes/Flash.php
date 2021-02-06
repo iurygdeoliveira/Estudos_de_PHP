@@ -6,6 +6,8 @@ namespace app\classes;
 
 class Flash
 {
+    private $flash;
+
     public static function set($key, $message, $alert = "success")
     {
         if (!isset($_SESSION[$key])) {
@@ -19,9 +21,14 @@ class Flash
     public static function get($key)
     {
         if (isset($_SESSION[$key])) {
-            $flash = $_SESSION[$key];
+            self::$flash = $_SESSION[$key];
             unset($_SESSION[$key]);
-            return $flash;
+            return self::$flash;
         }
+    }
+
+    public static function getMessage()
+    {
+        return (isset(self::$flash) ? self::$flash['message'] : false);
     }
 }
