@@ -11,9 +11,14 @@ abstract class Base
     use Template;
 
     // Obtendo nome da classe
-    protected function name($class): string
+    protected function nameClass($class): string
     {
         $fullName = explode('\\', $class);
         return mb_strtolower(end($fullName));
+    }
+
+    protected function nameView($class, $dir, $page): string
+    {
+        return $this->nameClass($class) . '/' . $dir . '/' . $page;
     }
 }

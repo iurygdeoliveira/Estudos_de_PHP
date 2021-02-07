@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-{% include "admin/partials/head.html" %}
+{% include "admin/user/partials/head.html" %}
 
 <body class="hold-transition sidebar-mini">
 
@@ -13,23 +13,19 @@
     <div class="wrapper">
 
         <!-- Navbar -->
-        {% include "admin/partials/navbar.html" %}
+        {% include "admin/user/partials/navbar.html" %}
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        {% include "admin/partials/sidebar.html" %}
+        {% include "admin/user/partials/sidebar.html" %}
 
         <!-- Content Wrapper. Contains page content -->
-        {% include "admin/partials/content.html" %}
+        {% include "admin/user/partials/content.html" %}
         <!-- /.content-wrapper -->
 
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.0.5
-            </div>
-        </footer>
+        <!-- Content Footer. Contains footer page content -->
+        {% include "admin/user/partials/footer.html" %}
+        <!-- /.content-footer -->
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
@@ -42,7 +38,7 @@
     {% endblock %}
 
     <!-- FOOTER -->
-    {% include "admin/partials/footer.html" %}
+    {% include "admin/user/partials/scripts.html" %}
 
 </body>
 

@@ -23,7 +23,9 @@ $app->get('/login', Login::class . ":index");
 $app->get('/recuperar', Login::class . ":forgot");
 
 // ADMIN ROUTES
-$app->post('/admin', Admin::class . ":index");
+$app->post('/admin', Admin::class . ":dashboard");
+$app->get('/admin', Admin::class . ":dashboard");
+$app->get('/user', Admin::class . ":user");
 
 // REDIRECT ROUTES
 $app->get('/redirecionar', Redirect::class . ":index");

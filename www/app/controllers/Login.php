@@ -26,7 +26,7 @@ class Login extends Base
 
         return $this->getTwig()->render(
             $response,
-            $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
+            $this->setView($this->nameClass(__CLASS__) . '/' . __FUNCTION__),
             [
                 'sistema' => 'teste',
                 'title' => 'Login',
@@ -41,7 +41,7 @@ class Login extends Base
 
         return $this->getTwig()->render(
             $response,
-            $this->setView($this->name(__CLASS__) . '/' . __FUNCTION__),
+            $this->setView($this->nameClass(__CLASS__) . '/' . __FUNCTION__),
             [
                 'sistema' => 'teste',
                 'title' => 'Recuperar senha',

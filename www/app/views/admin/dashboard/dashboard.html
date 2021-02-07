@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{% include "admin/dashboard/partials/head.html" %}
+
+<body class="hold-transition sidebar-mini">
+
+    <!-- HEADER -->
+
+    <!-- CONTENT -->
+    {% block content %}
+
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        {% include "admin/dashboard/partials/navbar.html" %}
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        {% include "admin/dashboard/partials/sidebar.html" %}
+
+        <!-- Content Wrapper. Contains page content -->
+        {% include "admin/dashboard/partials/content.html" %}
+        <!-- /.content-wrapper -->
+
+        <!-- Content Footer. Contains footer page content -->
+        {% include "admin/dashboard/partials/footer.html" %}
+        <!-- /.content-footer -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    {% endblock %}
+
+    <!-- FOOTER -->
+    {% include "admin/dashboard/partials/scripts.html" %}
+
+</body>
+
+</html>
