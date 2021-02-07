@@ -24,9 +24,10 @@ class Login extends Base
         //     var_dump($user->getError());
         // }
 
+        $nameView = $this->nameView(__CLASS__, __FUNCTION__);
         return $this->getTwig()->render(
             $response,
-            $this->setView($this->nameClass(__CLASS__) . '/' . __FUNCTION__),
+            $this->setView($nameView),
             [
                 'sistema' => 'teste',
                 'title' => 'Login',
@@ -39,9 +40,10 @@ class Login extends Base
     public function forgot($request, $response)
     {
 
+        $nameView = $this->nameView(__CLASS__, __FUNCTION__);
         return $this->getTwig()->render(
             $response,
-            $this->setView($this->nameClass(__CLASS__) . '/' . __FUNCTION__),
+            $this->setView($nameView),
             [
                 'sistema' => 'teste',
                 'title' => 'Recuperar senha',

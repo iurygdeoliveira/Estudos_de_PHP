@@ -17,8 +17,8 @@ abstract class Base
         return mb_strtolower(end($fullName));
     }
 
-    protected function nameView($class, $dir, $page): string
+    protected function nameView($class, $page): string
     {
-        return $this->nameClass($class) . '/' . $dir . '/' . $page;
+        return $this->nameClass($class) . '/' . $page;
     }
 }

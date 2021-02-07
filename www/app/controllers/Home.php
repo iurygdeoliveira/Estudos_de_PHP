@@ -10,9 +10,10 @@ class Home extends Base
 {
     public function index($request, $response)
     {
+        $nameView = $this->nameView(__CLASS__, __FUNCTION__);
         return $this->getTwig()->render(
             $response,
-            $this->setView($this->nameClass(__CLASS__) . '/' . __FUNCTION__),
+            $this->setView($nameView),
             [
                 'title' => 'Home',
                 'message' => Flash::getMessage(),

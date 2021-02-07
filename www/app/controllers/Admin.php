@@ -23,7 +23,15 @@ class Admin extends Base
     }
     public function dashboard($request, $response)
     {
-        $nameView = $this->nameView(__CLASS__, __FUNCTION__, __FUNCTION__);
+        $this->data += [
+            'screen' => 'Dashboard',
+            'select_dashboard' => 'active',
+            'select_dashboard_menu_open' => 'menu-open',
+            'select_user' => '',
+            'select_user_menu_open' => '',
+        ];
+
+        $nameView = $this->nameView(__CLASS__, __FUNCTION__);
         return $this->getTwig()->render(
             $response,
             $this->setView($nameView),
@@ -33,8 +41,15 @@ class Admin extends Base
 
     public function user($request, $response)
     {
+        $this->data += [
+            'screen' => 'Usuário',
+            'select_dashboard' => '',
+            'select_dashboard_menu_open' => '',
+            'select_user' => 'active',
+            'select_user_menu_open' => 'menu-open'
+        ];
 
-        $nameView = $this->nameView(__CLASS__, __FUNCTION__, __FUNCTION__);
+        $nameView = $this->nameView(__CLASS__, __FUNCTION__);
         return $this->getTwig()->render(
             $response,
             $this->setView($nameView),

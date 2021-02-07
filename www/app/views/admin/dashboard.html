@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{% include "admin/partials/head.html" %}
+
+<body class="hold-transition sidebar-mini">
+
+    {% block content %}
+
+    <div class="wrapper">
+
+        <!-- header -->
+        {% include "admin/partials/header.html" %}
+        <!-- /.header -->
+
+        <!-- sidebar -->
+        {% include "admin/partials/sidebar.html" %}
+        <!-- /.sidebar -->
+
+        <!-- content -->
+        {% include "admin/partials/content.html" %}
+        <!-- /.content -->
+
+        <!-- Content Footer. Contains footer page content -->
+        {% include "admin/partials/footer.html" %}
+        <!-- /.content-footer -->
+
+    </div>
+    <!-- ./wrapper -->
+
+    {% endblock %}
+
+    <!-- FOOTER -->
+    {% include "admin/partials/scripts.html" %}
+
+</body>
+
+</html>
