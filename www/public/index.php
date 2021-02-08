@@ -37,5 +37,14 @@ $app->delete('/deletar', Redirect::class . ":index");
 $methodOverrideMiddleware = new MethodOverrideMiddleware();
 $app->add($methodOverrideMiddleware);
 
+
+// ROUTES NOT FOUND
+$app->map(
+    ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
+    '/{routes:.+}',
+    function ($resquest, $response) {
+        return redirect($response, '/');
+    }
+);
 $app->run();
 ob_end_flush();

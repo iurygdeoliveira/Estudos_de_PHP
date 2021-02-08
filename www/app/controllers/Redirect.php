@@ -13,6 +13,6 @@ class Redirect extends Base
 
         Flash::set('message', 'Testando redirecionamento');
 
-        return $response->withHeader('location', '/')->withStatus(200);
+        return redirect($response, '/');
     }
 }
