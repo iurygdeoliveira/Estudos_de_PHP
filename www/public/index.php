@@ -30,8 +30,10 @@ $app->get('/user', Admin::class . ":user");
 // REDIRECT ROUTES
 $app->get('/redirecionar', Redirect::class . ":index");
 
-$app->put('/adicionar', Redirect::class . ":index");
-$app->delete('/deletar', Redirect::class . ":index");
+// ERROR ROUTES
+$app->get('/erro', Home::class . ":error");
+
+
 
 // Add Override verbs http
 $methodOverrideMiddleware = new MethodOverrideMiddleware();
@@ -43,7 +45,7 @@ $app->map(
     ['GET', 'POST', 'DELETE', 'PUT', 'PATCH'],
     '/{routes:.+}',
     function ($resquest, $response) {
-        return redirect($response, '/');
+        return redirect($response, '/erro');
     }
 );
 $app->run();

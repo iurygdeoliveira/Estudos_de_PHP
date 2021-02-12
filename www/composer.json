@@ -17,7 +17,11 @@
         },
         "files":[
             "app/support/config.php",
-            "app/support/helpers.php"
+            "app/support/validate.php",
+            "app/support/string.php",
+            "app/support/url.php",
+            "app/support/date.php",
+            "app/support/password.php"
         ]
     },
     "require": {

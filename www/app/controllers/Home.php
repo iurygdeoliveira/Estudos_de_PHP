@@ -22,4 +22,19 @@ class Home extends Base
 
         );
     }
+
+    public function error($request, $response)
+    {
+        $nameView = $this->nameView(__CLASS__, __FUNCTION__);
+        return $this->getTwig()->render(
+            $response,
+            $this->setView($nameView),
+            [
+                'title' => 'Erro',
+                'message' => Flash::getMessage(),
+                'link_home' => url()
+            ]
+
+        );
+    }
 }
