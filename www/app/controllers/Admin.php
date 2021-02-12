@@ -19,6 +19,7 @@ class Admin extends Base
             'year' => date('Y'),
             'link_admin' => url('admin'),
             'link_user' => url('user'),
+            'link_home' => url(),
         ];
     }
     public function dashboard($request, $response)

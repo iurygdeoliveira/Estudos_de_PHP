@@ -19,9 +19,10 @@
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Faça o login para acessar o sistema</p>
 
-                <form action="{{link_acesso}}" method="post">
+                <form action="{{link_acesso}}" method="post" id="form">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input type="text" class="form-control" placeholder="Email" name="email">
+                        {{flashes['email']['message']}}
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -29,7 +30,8 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Senha" name="senha">
+                        {{flashes['senha']['message']}}
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>

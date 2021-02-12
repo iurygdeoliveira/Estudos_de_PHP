@@ -16,7 +16,6 @@ class Home extends Base
             $this->setView($nameView),
             [
                 'title' => 'Home',
-                'message' => Flash::getMessage(),
                 'link_login' => url("login")
             ]
 
@@ -31,7 +30,6 @@ class Home extends Base
             $this->setView($nameView),
             [
                 'title' => 'Erro',
-                'message' => Flash::getMessage(),
                 'link_home' => url()
             ]
 
