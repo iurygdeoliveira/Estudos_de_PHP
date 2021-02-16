@@ -26,14 +26,15 @@ function is_passwd(string $password): bool
  * @param array $fields
  * @return bool
  */
-function required(array $fields): array
+function required(array $fields): bool
 {
-    $errors = array();
+    $error = false;
     foreach ($fields as $field) {
         if (empty($_POST[$field])) {
-            $errors[$field] = 'O campo é obrigatório';
+            $error = true;
+            break;
         }
     }
 
-    return $errors;
+    return $error;
 }

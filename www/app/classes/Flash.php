@@ -8,12 +8,11 @@ class Flash
 {
     private $flash;
 
-    public static function set($key, $message, $alert = "success")
+    public static function set($key, $message)
     {
         if (!isset($_SESSION['flashes'][$key])) {
             $_SESSION['flashes'][$key] = [
-                'message' => $message,
-                'alert' => $alert
+                'message' => $message
             ];
         }
     }
@@ -30,7 +29,7 @@ class Flash
     public static function setflashes(array $flashes)
     {
         foreach ($flashes as $key => $message) {
-            self::set($key, $message, 'danger');
+            self::set($key, $message);
         }
     }
 

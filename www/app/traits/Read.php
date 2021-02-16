@@ -9,12 +9,13 @@ use RedBeanPHP\RedException;
 
 trait Read
 {
-    public function select(string $table, string $params, string $value)
+    private function selectOne(string $table, string $params, string $value)
     {
 
         try {
-            return R::find($table, $params, [$value]);
+            return R::findOne($table, $params, [$value]);
         } catch (RedException $e) {
+            //FIXME escrever erro em log de sistema
             $this->error = $e->getMessage();
             return false;
         }

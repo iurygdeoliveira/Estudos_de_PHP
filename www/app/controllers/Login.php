@@ -47,36 +47,37 @@ class Login extends Base
     {
         //true = campos preenchidos
         //false = campo obrigatório vazio
-        $errors = required(['email', 'senha']);
+        $error = required(['email', 'senha']);
 
-        if (!empty($errors)) {
-            Flash::setFlashes($errors);
+        if ($error) {
+            $message = $this->flashMessage('Campo obrigatório não informado', 'danger');
+            Flash::set('backend', $message);
             return redirect($response, 'login');
         }
 
+        //FIXME
+        // Obter post de forma segura
         //Validando formato de email
         if (!is_email($_POST['email'])) {
-            Flash::set('email', 'Email informado inválido', 'danger');
+            $message = $this->flashMessage('Email informado inválido', 'danger');
+            Flash::set('backend', $message);
             return redirect($response, 'login');
         }
 
+        $user = new User();
 
-        // $user = new User();
+        $result = $user->emailExist($_POST['email']);
+        $verifiedPass = password_verify($_POST['senha'], (empty($result) ? '' : $result->pass));
 
-        // $email = 'iurygdeoliveira@gmail.com';
+        var_dump($result, $verifiedPass, $_POST['senha']);
+        if (!$result || !$verifiedPass) {
 
-        // $data = [
-        //     "email" => (is_email($email) ? $email : false),
-        //     "pass" => passwd('12345')
-        // ];
-
-        // if ($user->insert('user', $data) === false) {
-        //     var_dump($user->getError());
-        // }
-        //FIXME
-
-        // Obter post de forma segura
-
-        return redirect($response, 'admin');
+            $message = $this->flashMessage('Login inválido', 'danger');
+            Flash::set('backend', $message);
+            return redirect($response, 'login');
+        } else {
+            // Login efetuado
+            return redirect($response, 'admin');
+        }
     }
 }

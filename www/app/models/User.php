@@ -33,4 +33,11 @@ class User
     {
         return $this->error;
     }
+
+    public function emailExist(string $value)
+    {
+        $result = $this->selectOne('user', 'email = ?', $value);
+        // Convertendo $result para o formato de objeto
+        return (empty($result) ? false : (object)$result->export());
+    }
 }

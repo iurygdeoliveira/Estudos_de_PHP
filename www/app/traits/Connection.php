@@ -22,7 +22,7 @@ trait Connection
             ); //for both mysql or mariaDB
 
             R::getDatabaseAdapter()->getDatabase()->stringifyFetches(FALSE);
-            R::getDatabaseAdapter()->getDatabase()->getPDO()->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
+            R::getDatabaseAdapter()->getDatabase()->getPDO()->setAttribute(PDO::ATTR_EMULATE_PREPARES, TRUE);
         } catch (RedException $e) {
             $this->error = $e->getMessage();
             return false;
