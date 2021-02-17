@@ -18,30 +18,14 @@
             </div>
         </div>
 
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                   with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview {{select_dashboard_menu_open}}">
-                    <a href="{{link_admin}}" class="nav-link {{select_dashboard}}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Dashboard
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item has-treeview {{select_user_menu_open}}">
-                    <a href="{{link_user}}" class="nav-link {{select_user}}">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Usuário
-                        </p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <!-- /.sidebar-menu -->
+        {% if dashboard == true %}
+        <!-- Sidebar Dashboard -->
+        {% include "admin/partials/dashboardSidebar.html" %}
+        {% endif %}
+        {% if user == true %}
+        <!-- Sidebar User -->
+        {% include "admin/partials/userSidebar.html" %}
+        {% endif %}
     </div>
     <!-- /.sidebar -->
 </aside>

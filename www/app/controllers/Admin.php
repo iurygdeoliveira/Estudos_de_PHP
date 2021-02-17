@@ -24,12 +24,11 @@ class Admin extends Base
     }
     public function dashboard($request, $response)
     {
+        // Ativando classes específicas do CSS para renderizar os estilos na sidebar
         $this->data += [
             'screen' => 'Dashboard',
-            'select_dashboard' => 'active',
-            'select_dashboard_menu_open' => 'menu-open',
-            'select_user' => '',
-            'select_user_menu_open' => '',
+            'dashboard' => true,
+            'user' => false
         ];
 
         $nameView = $this->nameView(__CLASS__, __FUNCTION__);
@@ -42,12 +41,11 @@ class Admin extends Base
 
     public function user($request, $response)
     {
+        // Ativando classes específicas do CSS para renderizar os estilos na sidebar
         $this->data += [
             'screen' => 'Usuário',
-            'select_dashboard' => '',
-            'select_dashboard_menu_open' => '',
-            'select_user' => 'active',
-            'select_user_menu_open' => 'menu-open'
+            'dashboard' => false,
+            'user' => true
         ];
 
         $nameView = $this->nameView(__CLASS__, __FUNCTION__);
