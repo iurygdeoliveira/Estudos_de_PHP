@@ -55,10 +55,11 @@ class Login extends Base
             return redirect($response, 'login');
         }
 
-        //FIXME
-        // Obter post de forma segura
+        $email = filterInput($_POST['email']);
+        $senha = filterInput($_POST['senha']);
+
         //Validando formato de email
-        if (!is_email($_POST['email'])) {
+        if (!is_email($email)) {
             $message = $this->flashMessage('Email informado inválido', 'danger');
             Flash::set('backend', $message);
             return redirect($response, 'login');
@@ -66,10 +67,9 @@ class Login extends Base
 
         $user = new User();
 
-        $result = $user->emailExist($_POST['email']);
-        $verifiedPass = password_verify($_POST['senha'], (empty($result) ? '' : $result->pass));
+        $result = $user->emailExist($email);
+        $verifiedPass = password_verify($senha, (empty($result) ? '' : $result->pass));
 
-        var_dump($result, $verifiedPass, $_POST['senha']);
         if (!$result || !$verifiedPass) {
 
             $message = $this->flashMessage('Login inválido', 'danger');
