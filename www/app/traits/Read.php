@@ -20,4 +20,16 @@ trait Read
             return false;
         }
     }
+
+    private function selectAll(string $table)
+    {
+
+        try {
+            return R::findAndExport($table);
+        } catch (RedException $e) {
+            //FIXME escrever erro em log de sistema
+            $this->error = $e->getMessage();
+            return false;
+        }
+    }
 }

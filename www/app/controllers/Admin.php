@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace app\controllers;
 
+use app\models\User;
+
 class Admin extends Base
 {
     private $data;
@@ -41,11 +43,17 @@ class Admin extends Base
 
     public function user($request, $response)
     {
+        $user = new User();
+
+        // Obtendo usuários registrados no banco de dados
+        $result = $user->getAll();
+
         // Ativando classes específicas do CSS para renderizar os estilos na sidebar
         $this->data += [
             'screen' => 'Usuário',
             'dashboard' => false,
-            'user' => true
+            'user' => true,
+            'users' => $result // Usuários registrados no banco
         ];
 
         $nameView = $this->nameView(__CLASS__, __FUNCTION__);

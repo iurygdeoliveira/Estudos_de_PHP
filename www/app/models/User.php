@@ -40,4 +40,10 @@ class User
         // Convertendo $result para o formato de objeto
         return (empty($result) ? false : (object)$result->export());
     }
+
+    public function getAll()
+    {
+        $result = $this->selectAll('user');
+        return (empty($result) ? false : $result);
+    }
 }
